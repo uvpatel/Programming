@@ -1,0 +1,129 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body background and container setup */
+body {
+    background: linear-gradient(45deg, #6b1fe6, #ff7c77);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+
+/* Container holding everything */
+.container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Header */
+header {
+    margin-bottom: 2rem;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Membership cards */
+.membership-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.membership-card {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+.membership-card h2 {
+    font-size: 1.6rem;
+    color: #ff7c77;
+    margin-bottom: 1rem;
+}
+
+.membership-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+/* Button */
+.cta-btn {
+    background: linear-gradient(45deg, #ff7c77, #ff9a58);
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(45deg, #ff9a58, #ff7c77);
+    transform: scale(1.05);
+}
+
+.cta-btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .membership-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membership-card {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-size: 1rem;
+    }
+}

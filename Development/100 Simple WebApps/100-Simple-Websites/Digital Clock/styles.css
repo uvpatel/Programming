@@ -1,0 +1,78 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e4f0f9; /* Light sky blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  /* Container for the clock */
+  .clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* The clock styling with sky blue theme */
+  .clock {
+    border: 15px solid #3498db; /* Sky blue border */
+    border-radius: 50%; /* Round shape */
+    padding: 40px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #a6c8ff, #2980b9); /* Light blue gradient for the background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  /* Digital Time Styling */
+  .time {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff; /* White color for the time */
+    letter-spacing: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Shadow for better contrast */
+  }
+  
+  /* Date Styling */
+  .date {
+    font-size: 20px;
+    color: #ecf0f1; /* Light grayish white color */
+    margin-top: 10px;
+    letter-spacing: 1px;
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .clock {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .time {
+      font-size: 40px;
+    }
+  
+    .date {
+      font-size: 16px;
+    }
+  }
+  

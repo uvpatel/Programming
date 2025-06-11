@@ -1,0 +1,63 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up the sky-black gradient background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #0d1b2a, #2f3a46);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Center the content and style the container */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Main heading styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Styling for the clock */
+#clock {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #e74c3c; /* Bright red for high contrast */
+    letter-spacing: 1.5px;
+    animation: clockAnimation 1s ease-in-out infinite;
+}
+
+/* Animation for the clock */
+@keyframes clockAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

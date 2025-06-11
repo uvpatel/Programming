@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #6b6b6b, #252525);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background: #1a1a1a;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #FFB600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .comparison-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .comparison-item {
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .comparison-item:hover {
+    transform: scale(1.05);
+    background: #333;
+  }
+  
+  .comparison-item h2 {
+    font-size: 1.6rem;
+    color: #FFB600;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+  
+  .select-btn {
+    background-color: #FFB600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .select-btn:hover {
+    background-color: #ff8c00;
+  }
+  
+  .selected-products {
+    margin-top: 40px;
+    background-color: #3d3d3d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  #selected-list {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  #selected-list li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #FFB600;
+  }
+  

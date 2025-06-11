@@ -1,0 +1,101 @@
+/* General body styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Soft gradient */
+    color: #333;
+}
+
+/* Game container */
+.game-container {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 380px;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Input field styling */
+input[type="number"] {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: #6a82fb;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Button styling */
+button {
+    padding: 12px 25px;
+    background-color: #6a82fb; /* Soft blue */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #fc5c7d; /* Pink accent */
+}
+
+/* Hidden button */
+.hidden {
+    display: none;
+}
+
+/* Message styling */
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}

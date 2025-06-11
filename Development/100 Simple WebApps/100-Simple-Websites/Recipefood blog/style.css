@@ -1,0 +1,148 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ff6347;
+    padding: 20px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffdf00;
+}
+
+/* Banner Section */
+.banner {
+    background: linear-gradient(to right, #ff6347, #ff9a8b);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Recipe Cards */
+.recipes {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.recipes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.recipe-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.recipe-cards .card {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    margin: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe-cards .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-cards .card h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+}
+
+.recipe-cards .card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.recipe-cards .card button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.recipe-cards .card button:hover {
+    background-color: #ff9a8b;
+}
+
+.recipe-cards .card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recipe-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

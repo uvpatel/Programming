@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007aff; /* iOS-like blue */
+    padding: 20px 40px;
+  }
+  
+  .navbar .logo img {
+    width: 100px;
+  }
+  
+  .navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar nav ul li {
+    display: inline;
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar nav ul li a:hover {
+    color: #00b0ff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #00b0ff; /* Light blue to match iOS aesthetic */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .hero p {
+    font-size: 20px;
+  }
+  
+  /* Products Section */
+  .products {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .products h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .product-card .info {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .product-card .info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card .info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .product-card .info .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00b0ff;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer p {
+    font-size: 16px;
+  }
+  

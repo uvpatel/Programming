@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video to MP3 Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .banner {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .upload-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .upload-section input, .upload-section button {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .preview-section {
+            margin: 20px 0;
+        }
+
+        .preview {
+            border: 1px solid #ccc;
+            padding: 15px;
+            min-height: 50px;
+            text-align: center;
+            background: #f9f9f9;
+            overflow-wrap: break-word;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .actions button {
+            background: #28A745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .actions button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .upload-section input, .actions button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Video to MP3 Converter</h1>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>Convert Videos to MP3</h2>
+        </div>
+
+        <div class="upload-section">
+            <h3>Enter YouTube Video Link:</h3>
+            <input type="text" id="youtubeLink" placeholder="Paste YouTube link here">
+
+            <h3>OR Upload Video File:</h3>
+            <input type="file" id="videoFile" accept="video/*">
+        </div>
+
+        <div class="preview-section">
+            <h3>File Preview:</h3>
+            <div id="preview" class="preview">No file or link provided yet.</div>
+        </div>
+
+        <div class="actions">
+            <button id="convertButton" disabled>Convert to MP3</button>
+            <a id="downloadLink" style="display: none;" download="output.mp3">Download MP3</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Video to MP3 Converter. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        const youtubeLinkInput = document.getElementById('youtubeLink');
+        const videoFileInput = document.getElementById('videoFile');
+        const preview = document.getElementById('preview');
+        const convertButton = document.getElementById('convertButton');
+        const downloadLink = document.getElementById('downloadLink');
+
+        let videoFile = null;
+        let youtubeLink = '';
+
+        youtubeLinkInput.addEventListener('input', () => {
+            youtubeLink = youtubeLinkInput.value.trim();
+            if (youtubeLink) {
+                preview.textContent = `YouTube Link: ${youtubeLink}`;
+                convertButton.disabled = false;
+            } else {
+                preview.textContent = 'No file or link provided yet.';
+                convertButton.disabled = true;
+            }
+        });
+
+        videoFileInput.addEventListener('change', (event) => {
+            videoFile = event.target.files[0];
+            if (videoFile) {
+                preview.textContent = `File Name: ${videoFile.name}`;
+                convertButton.disabled = false;
+            } else {
+                preview.textContent = 'No file or link provided yet.';
+                convertButton.disabled = true;
+            }
+        });
+
+        convertButton.addEventListener('click', async () => {
+            if (youtubeLink) {
+                fetch('/convert-youtube', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ url: youtubeLink }),
+                })
+                    .then((response) => response.blob())
+                    .then((blob) => {
+                        const mp3Url = URL.createObjectURL(blob);
+                        downloadLink.href = mp3Url;
+                        downloadLink.style.display = 'inline';
+                    })
+                    .catch((error) => {
+                        preview.textContent = 'Error converting YouTube link.';
+                        console.error(error);
+                    });
+            } else if (videoFile) {
+                const formData = new FormData();
+                formData.append('file', videoFile);
+
+                fetch('/convert-file', {
+                    method: 'POST',
+                    body: formData,
+                })
+                    .then((response) => response.blob())
+                    .then((blob) => {
+                        const mp3Url = URL.createObjectURL(blob);
+                        downloadLink.href = mp3Url;
+                        downloadLink.style.display = 'inline';
+                    })
+                    .catch((error) => {
+                        preview.textContent = 'Error converting video file.';
+                        console.error(error);
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

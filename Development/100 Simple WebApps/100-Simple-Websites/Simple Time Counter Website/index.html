@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Time Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #87ceeb, #00bfff); /* Sky Blue Gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: gradientAnimation 5s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(45deg, #87ceeb, #00bfff); /* Light to Dark Sky Blue */
+            }
+            50% {
+                background: linear-gradient(45deg, #00bfff, #87ceeb); /* Reversed gradient for effect */
+            }
+            100% {
+                background: linear-gradient(45deg, #87ceeb, #00bfff);
+            }
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00bfff; /* Sky Blue Color */
+            font-family: 'Verdana', sans-serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #time-display {
+            font-size: 48px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #00bfff; /* Sky Blue Color */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #87ceeb; /* Sky Blue */
+            color: white;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #00bfff; /* Darker Sky Blue on hover */
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Time Counter</h1>
+        <div id="time-display">00:00:00</div>
+        <button id="startStopBtn">Start</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <script>
+        let timerInterval;
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+        let isRunning = false;
+
+        const timeDisplay = document.getElementById("time-display");
+        const startStopBtn = document.getElementById("startStopBtn");
+        const resetBtn = document.getElementById("resetBtn");
+
+        // Update the time display
+        function updateTimeDisplay() {
+            const formattedTime = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+            timeDisplay.textContent = formattedTime;
+        }
+
+        // Format time to always show two digits
+        function formatTime(time) {
+            return time < 10 ? `0${time}` : time;
+        }
+
+        // Start the timer
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                seconds++;
+                if (seconds === 60) {
+                    seconds = 0;
+                    minutes++;
+                }
+                if (minutes === 60) {
+                    minutes = 0;
+                    hours++;
+                }
+                updateTimeDisplay();
+            }, 1000);
+        }
+
+        // Stop the timer
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        // Start/Stop button functionality
+        startStopBtn.addEventListener("click", () => {
+            if (isRunning) {
+                stopTimer();
+                startStopBtn.textContent = "Start";
+            } else {
+                startTimer();
+                startStopBtn.textContent = "Stop";
+            }
+            isRunning = !isRunning;
+        });
+
+        // Reset button functionality
+        resetBtn.addEventListener("click", () => {
+            stopTimer();
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            updateTimeDisplay();
+            startStopBtn.textContent = "Start";
+            isRunning = false;
+        });
+    </script>
+</body>
+</html>

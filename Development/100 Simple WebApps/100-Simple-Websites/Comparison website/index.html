@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparison Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Product Comparison</h1>
+    </header>
+
+    <div class="comparison-container">
+      <div class="comparison-item" id="item1">
+        <h2>Product 1</h2>
+        <p class="product-description">Description of Product 1 goes here.</p>
+        <button class="select-btn" onclick="toggleComparison('item1')">Select</button>
+      </div>
+
+      <div class="comparison-item" id="item2">
+        <h2>Product 2</h2>
+        <p class="product-description">Description of Product 2 goes here.</p>
+        <button class="select-btn" onclick="toggleComparison('item2')">Select</button>
+      </div>
+
+      <div class="comparison-item" id="item3">
+        <h2>Product 3</h2>
+        <p class="product-description">Description of Product 3 goes here.</p>
+        <button class="select-btn" onclick="toggleComparison('item3')">Select</button>
+      </div>
+    </div>
+
+    <div class="selected-products">
+      <h2>Selected Products:</h2>
+      <ul id="selected-list">
+        <!-- Selected items will be shown here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

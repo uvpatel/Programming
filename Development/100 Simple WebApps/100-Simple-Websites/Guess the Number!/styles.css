@@ -1,0 +1,76 @@
+body {  
+    font-family: 'Arial', sans-serif;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
+    margin: 0;  
+    background-color: #e0f7fa;  /* Light cyan background */  
+}  
+
+.container {  
+    text-align: center;  
+    background-color: white;  
+    padding: 30px;  
+    border-radius: 15px;  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s;  
+}  
+
+.container:hover {  
+    transform: scale(1.02);  /* Slight hover effect */  
+}  
+
+h1 {  
+    margin-bottom: 10px;  
+    color: #00796b;  /* Darker cyan for heading */  
+}  
+
+p {  
+    color: #555;  /* Grey text for instructions */  
+}  
+
+input {  
+    padding: 10px;  
+    margin: 10px 0;  
+    border: 2px solid #00796b;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    transition: border-color 0.3s;  
+}  
+
+input:focus {  
+    border-color: #004d40;  /* Darker shade when focused */  
+    outline: none;          /* Remove default outline */  
+}  
+
+button {  
+    padding: 10px 15px;  
+    margin-top: 10px;  
+    cursor: pointer;  
+    background-color: #00796b;  /* Primary button color */  
+    color: white;      /* White text color */  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    transition: background-color 0.3s, transform 0.2s;  
+}  
+
+button:hover {  
+    background-color: #004d40;  /* Darker shade on hover */  
+    transform: translateY(-2px); /* Lift effect on hover */  
+}  
+
+#feedback {  
+    margin-top: 15px;  
+    color: #f44336; /* Red for feedback messages */  
+    font-weight: bold;  
+}  
+
+#restartGame {  
+    background-color: #ff9800; /* Different color for the restart button */  
+}  
+
+#restartGame:hover {  
+    background-color: #f57c00; /* Darker shade on hover */  
+}  

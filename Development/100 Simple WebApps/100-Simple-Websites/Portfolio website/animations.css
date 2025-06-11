@@ -1,0 +1,9 @@
+/* Add a fade-in effect */
+.portfolio-item {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.portfolio-item.fade-in {
+    opacity: 1;
+}

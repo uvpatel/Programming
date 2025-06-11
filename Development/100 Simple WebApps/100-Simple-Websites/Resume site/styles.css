@@ -1,0 +1,178 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    font-size: 16px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff80ab;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+#about h1 {
+    font-size: 3rem;
+}
+
+#about p {
+    font-size: 1.25rem;
+}
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.skill {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #0072ff;
+    font-size: 1.25rem;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background-color: #ff80ab;
+    color: #fff;
+}
+
+/* Experience Section */
+#experience {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.experience-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.experience-card p {
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #0072ff;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font-size: 1rem;
+}
+
+button {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #0072ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff80ab;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skill-container {
+        flex-direction: column;
+    }
+
+    .skill {
+        margin-bottom: 10px;
+    }
+
+    form {
+        width: 90%;
+    }
+}

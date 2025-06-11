@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Notes App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div style="display: flex; align-items: center;">
+        <button id="themeToggleBtn" class="theme-toggle" title="Toggle dark mode">
+          <span class="sun-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </span>
+          <span class="moon-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+        <h1>Notes</h1>
+      </div>
+      <button id="addNoteBtn" class="btn primary">Add Note</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="notesGrid" class="notes-grid">
+      <!-- Notes will be dynamically added here -->
+    </div>
+  </main>
+
+  <!-- Note Dialog -->
+  <div id="noteDialog" class="dialog-overlay">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <h2 id="dialogTitle">Add Note</h2>
+        <button id="closeDialog" class="close-btn">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <input type="text" id="noteTitle" placeholder="Note title" class="note-input">
+        <textarea id="noteContent" placeholder="Write your note here..." class="note-textarea"></textarea>
+      </div>
+      <div class="dialog-footer">
+        <button id="cancelBtn" class="btn secondary">Cancel</button>
+        <button id="saveNoteBtn" class="btn primary">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

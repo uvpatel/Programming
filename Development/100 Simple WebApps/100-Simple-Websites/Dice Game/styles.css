@@ -1,0 +1,63 @@
+/* Base Styling */
+body {
+    background: linear-gradient(135deg, #ff6ec7, #fed6e3);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #f76c6c;
+    margin-bottom: 20px;
+  }
+  
+  .dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .dice {
+    transition: transform 0.3s ease;
+  }
+  
+  .dice:hover {
+    transform: rotate(360deg);
+  }
+  
+  .roll-btn {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .roll-btn:hover {
+    background-color: #ab47bc;
+  }
+  
+  #result {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+  }
+  

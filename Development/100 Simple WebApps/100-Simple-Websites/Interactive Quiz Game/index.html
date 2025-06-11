@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Menu -->
+        <div id="main-menu" class="main-menu">
+            <h1>Welcome to the Quiz Game!</h1>
+            <div class="game-options">
+                <button class="option" onclick="startQuiz('easy')">Easy</button>
+                <button class="option" onclick="startQuiz('medium')">Medium</button>
+                <button class="option" onclick="startQuiz('hard')">Hard</button>
+            </div>
+        </div>
+
+        <!-- Quiz Box -->
+        <div id="quiz-box" class="quiz-box">
+            <div id="question" class="question">Loading Question...</div>
+            <div class="timer">Time Left: <span id="timer">30</span>s</div>
+            <div class="options">
+                <button class="option" onclick="checkAnswer(0)">Option 1</button>
+                <button class="option" onclick="checkAnswer(1)">Option 2</button>
+                <button class="option" onclick="checkAnswer(2)">Option 3</button>
+                <button class="option" onclick="checkAnswer(3)">Option 4</button>
+            </div>
+            <div class="feedback">
+                <p id="feedback"></p>
+            </div>
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Result Box -->
+        <div id="result-box" class="result-box">
+            <h2>Your Score: <span id="score"></span>/5</h2>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

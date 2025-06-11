@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar with chat history -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn">
+                    <i class="fas fa-plus"></i>
+                    <span>New chat</span>
+                </button>
+            </div>
+            <div class="chat-history">
+                <!-- Chat history items will be added here -->
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">U</div>
+                    <div class="user-name">User</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main chat area -->
+        <main class="chat-area">
+            <div class="chat-header">
+                <div class="model-selector">
+                    <span class="current-model">GPT-4</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            
+            <div class="messages-container">
+                <div class="welcome-container" id="welcome-screen">
+                    <h1>ChatGPT</h1>
+                    <div class="examples-container">
+                        <h3>Examples</h3>
+                        <div class="example-grid">
+                            <div class="example-card">Explain quantum computing in simple terms</div>
+                            <div class="example-card">How do I make a HTTP request in Javascript?</div>
+                            <div class="example-card">Got any creative ideas for a 10 year old's birthday?</div>
+                            <div class="example-card">How do I make an HTTP request in Javascript?</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be added here -->
+                </div>
+            </div>
+
+            <div class="input-area">
+                <form id="message-form">
+                    <div class="input-container">
+                        <textarea 
+                            id="message-input" 
+                            placeholder="Message ChatGPT..." 
+                            rows="1"></textarea>
+                        <button type="submit" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="disclaimer">
+                    ChatGPT can make mistakes. Consider checking important information.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

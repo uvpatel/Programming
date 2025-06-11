@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="timer">
+      <h1>Countdown Timer</h1>
+      <div id="countdown" class="countdown-display">
+        <div class="time" id="days"></div>
+        <div class="time" id="hours"></div>
+        <div class="time" id="minutes"></div>
+        <div class="time" id="seconds"></div>
+      </div>
+      <p id="message">Time is running out...</p>
+
+      <div class="controls">
+        <button id="startStopBtn" onclick="toggleCountdown()">Start</button>
+        <button id="setTimeBtn" onclick="openTimeModal()">Set Time</button>
+      </div>
+
+      <!-- Modal for setting custom time -->
+      <div id="timeModal" class="modal">
+        <div class="modal-content">
+          <h2>Set Countdown Time</h2>
+          <label for="customTime">Enter time in seconds:</label>
+          <input type="number" id="customTime" placeholder="Seconds">
+          <button onclick="setCustomTime()">Set Time</button>
+          <button onclick="closeTimeModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

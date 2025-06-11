@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Job Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">JobSite</div>
+    <nav>
+      <ul>
+        <li><a href="#jobs">Browse Jobs</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Dream Job</h1>
+      <p>Search for jobs, companies, and new career opportunities.</p>
+      <input type="text" id="job-search" placeholder="Search for jobs..." onkeyup="filterJobs()">
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section id="jobs" class="jobs-section">
+    <h2>Available Jobs</h2>
+    <div class="job-listings" id="job-listings">
+      <div class="job-card" data-title="Software Engineer">
+        <h3>Software Engineer</h3>
+        <p>Company: TechCorp</p>
+        <p>Location: Remote</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="job-card" data-title="Graphic Designer">
+        <h3>Graphic Designer</h3>
+        <p>Company: DesignStudio</p>
+        <p>Location: New York</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+      <div class="job-card" data-title="Product Manager">
+        <h3>Product Manager</h3>
+        <p>Company: InnovateX</p>
+        <p>Location: San Francisco</p>
+        <button class="apply-btn">Apply Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <p>We connect talented people with top companies. Our platform helps you find your ideal job effortlessly.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>Get in touch with us via email: <a href="mailto:support@jobsite.com">support@jobsite.com</a></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

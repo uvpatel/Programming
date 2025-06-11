@@ -1,0 +1,115 @@
+/* style.css */
+
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #ff7e5f, #feb47b); /* Warm gradient background */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.calculator-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Header */
+.header h1 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Calculator Layout */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.display {
+    width: 100%;
+    padding: 20px;
+    font-size: 26px;
+    text-align: right;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Button Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Basic Button Styling */
+.button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #4e8df4;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #357ad4;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Scientific and Special Buttons */
+.scientific {
+    background-color: #ff6f61;
+}
+
+.scientific:hover {
+    background-color: #f54242;
+}
+
+/* Smooth animation for transitions */
+button, input {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Styling for Responsive Layout */
+@media (max-width: 480px) {
+    .calculator-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .display {
+        font-size: 22px;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Review Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ReviewSite</div>
+        <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+    </header>
+
+    <main>
+        <section class="reviews">
+            <h2>Latest Reviews</h2>
+            <div class="review-card">
+                <p class="review-text">"This product is amazing! Highly recommend it to everyone."</p>
+                <p class="review-author">- John Doe</p>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"It didn’t meet my expectations. Could be better."</p>
+                <p class="review-author">- Jane Smith</p>
+                <div class="rating">⭐⭐⭐</div>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"Great value for money, loved it!"</p>
+                <p class="review-author">- Michael Lee</p>
+                <div class="rating">⭐⭐⭐⭐</div>
+            </div>
+        </section>
+
+        <section class="add-review">
+            <h2>Leave a Review</h2>
+            <textarea placeholder="Write your review here..."></textarea>
+            <button class="submit-btn">Submit Review</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ReviewSite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

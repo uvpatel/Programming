@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word to PDF Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .banner {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .upload-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .upload-section input[type="file"] {
+            display: none;
+        }
+
+        .upload-section label {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .preview-section {
+            margin: 20px 0;
+        }
+
+        .preview {
+            border: 1px solid #ccc;
+            padding: 15px;
+            min-height: 150px;
+            text-align: center;
+            background: #f9f9f9;
+            overflow-wrap: break-word;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .actions button {
+            background: #28A745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .actions button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .upload-section label, .actions button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Word to PDF Converter</h1>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h2>Convert your Word documents to PDF easily</h2>
+        </div>
+
+        <div class="upload-section">
+            <input type="file" id="wordFile" accept=".doc,.docx">
+            <label for="wordFile">Upload Word File</label>
+        </div>
+
+        <div class="preview-section">
+            <h3>File Preview:</h3>
+            <div id="preview" class="preview">No file uploaded yet.</div>
+        </div>
+
+        <div class="actions">
+            <button id="convertButton" disabled>Convert to PDF</button>
+            <a id="downloadLink" style="display: none; text-decoration: none;">
+                <button id="downloadButton">Download PDF</button>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Word to PDF Converter. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        const wordFileInput = document.getElementById('wordFile');
+        const preview = document.getElementById('preview');
+        const convertButton = document.getElementById('convertButton');
+        const downloadLink = document.getElementById('downloadLink');
+
+        wordFileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                preview.textContent = `File Name: ${file.name}`;
+                convertButton.disabled = false;
+            } else {
+                preview.textContent = 'No file uploaded yet.';
+                convertButton.disabled = true;
+            }
+        });
+
+        convertButton.addEventListener('click', () => {
+            const fileName = 'converted-file.pdf';
+            const fileContent = 'This is a simulated PDF file content.';
+            const blob = new Blob([fileContent], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+
+            downloadLink.href = url;
+            downloadLink.download = fileName;
+            downloadLink.style.display = 'inline';
+        });
+    </script>
+</body>
+</html>
