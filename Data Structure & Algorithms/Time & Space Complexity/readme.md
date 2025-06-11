@@ -79,8 +79,89 @@ The total number of times **count++** will run is **N + N/2 + N/4+...+1= 2 * N**
 
 Some general time complexities are listed below with the input range for which they are accepted in competitive programming: 
 
+![Table](image.jpg)
 
-| Input Length | Worst Accepted Time Complexity | Usually type of solutions|
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+**Space Complexity:**
+### Defination -
+> Problem-solving using computer requires memory to hold temporary data or final result while the program is in execution. The amount of memory required by the algorithm to solve given problem is called **space complexity** of the algorithm.
+
+> The space complexity of an algorithm quantifies the amount of space taken by an algorithm to run as a function of the length of the input. Consider an example: Suppose a problem to find the [frequency of array elements](https://www.geeksforgeeks.org/counting-frequencies-of-array-elements/).
+
+It is the amount of memory needed for the completion of an algorithm. 
+
+To estimate the memory requirement we need to focus on two parts: 
+
+**1) A fixed part:** It is independent of the input size. It includes memory for instructions (code), constants, variables, etc.
+
+**2) A variable part:** It is dependent on the input size. It includes memory for recursion stack, referenced variables, etc.
+
+Example : Addition of two scalar variables
+
+```t
+Algorithm ADD SCALAR(A, B)
+//Description: Perform arithmetic addition of two numbers
+//Input: Two scalar variables A and B
+//Output: variable C, which holds the addition of A and B
+C <— A+B
+return C
+```
+
+The addition of two scalar numbers requires one extra memory location to hold the result. Thus the space complexity of this algorithm is constant, hence S(n) = O(1).
+
+The pseudo-code is as follows: 
+
+```t
+int freq[n];
+int a[n];
+for(int i = 0; i<n; i++)
+{
+   cin>>a[i];
+   freq[a[i]]++;
+}  
+```
+
+Below is the implementation of the above approach:
+
+
+```c++
+// C++ program for the above approach
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to count frequencies of array items
+void countFreq(int arr[], int n)
+{
+    unordered_map<int, int> freq;
+
+    // Traverse through array elements and
+    // count frequencies
+    for (int i = 0; i < n; i++)
+        freq[arr[i]]++;
+
+    // Traverse through map and print frequencies
+    for (auto x : freq)
+        cout << x.first << " " << x.second << endl;
+}
+
+// Driver Code
+int main()
+{
+    // Given array
+    int arr[] = { 10, 20, 20, 10, 10, 20, 5, 20 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    // Function Call
+    countFreq(arr, n);
+    return 0;
+}
+```
+
+#### Output:
+```5 1
+20 4
+10 3
+```
+
+Here two arrays of length N, and variable i are used in the algorithm so, the total space used is **N * c + N * c + 1 * c = 2N * c + c**, where c is a unit space taken. For many inputs, constant c is insignificant, and it can be said that the space complexity is **O(N)**.
+
+There is also auxiliary space, which is different from space complexity. The main difference is where space complexity quantifies the total space used by the algorithm, auxiliary space quantifies the extra space that is used in the algorithm apart from the given input. In the above example, the auxiliary space is the space used by the freq[] array because that is not part of the given input. So total auxiliary space is **N * c + c** which is **O(N)** only. 
