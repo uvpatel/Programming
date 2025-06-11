@@ -11,11 +11,22 @@
 8) Utilise your time in productive work, have patience. also , don't stick to one perticular stack or framwork, in programming main thing is problem solving.Use framework and stack according to usecase use them wisely according to project needs.
 
 ## Rule of 100:
+>" if you want to master any perticular skill. do 100 things releted to that perticular thing releted to skill."
 
 1) Logic Building.
+- [Logic Building](https://www.geeksforgeeks.org/logic-building-problems/)
+
+
 2) Learn DSA and Apply in Development.
+- [DSA](https://www.example.com)
+- [Data Structure](https://www.geeksforgeeks.org/data-structures/)
+- [Algorithms](https://www.geeksforgeeks.org/fundamentals-of-algorithms/)
+
+
 3) Learn About DATA Science and ML and make models. 
+
+
 4) Deployement.
 
 
--**Application** : 
+**Application** : 
