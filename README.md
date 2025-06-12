@@ -30,3 +30,14 @@
 
 
 **Application** : 
+
+
+- Some thing keep in mind 
+1) Do Programming is not that easy. if it is. no lubricative salarys are get for programmers.
+2) Programming is a skill and it can be develop according to the time and practice with right approcha and with right roadmap.
+
+
+**Project & Products** :
+1) after learning about programming make projects and also don't clone it entirely. take refrence use your brain.exe and add some kind of fetures which convert entire project into products.
+
+
