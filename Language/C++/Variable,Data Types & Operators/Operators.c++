@@ -23,7 +23,7 @@ int main() {
     cout << (num1 == num2) << endl;
     cout << (num1 != num2) << endl;
    
-    // Unary Operator
+    // Unary Operator (Use in Loops)
 
     // cout <<"Post Increment: "<< num1++ << endl;
     // cout <<"Pre Increment: "<< ++num1 << endl;
