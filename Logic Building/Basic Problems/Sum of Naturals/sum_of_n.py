@@ -33,3 +33,7 @@ def sum_n(m):
         return m + sum_n(m-1)
     
 print(f"The sume of {number} is {sum_n(number)}, using recursion")
+
+
+print(f"The sume of {number} is {(number*(number+1))/2}, using Formula based Method")
+
