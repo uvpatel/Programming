@@ -139,7 +139,7 @@ d. Given a personal's age, find if they should get a driving license or not.
 
 ##### Calculate "Simple Intrerest" from Principal(P), Rate(R) & Time(T).
 
-- Mathemetical Approach - 
+- Mathemetical Approach - Use Formula
 
 - **note** - Simple interest = Principal * Rate * Time
 
@@ -163,10 +163,48 @@ d. Given a personal's age, find if they should get a driving license or not.
 
 - Steps:
 1. input a,b
-2. if a > b:
-    print("a is maximum")
+2.  if a > b:
+        print("a is maximum")
     else:
-    print("b is maximum")
+        print("b is maximum")
+        
+3. exit
 
-3. print(S.I)
-4. exit
+
+##### Calculate Factorial of a number N.
+
+- Mathemetical Approach - Use Formula
+
+- n! = n * (n-1) * ... * 1
+- Logical Programming approach.
+
+- **Logic** -
+
+
+- Steps:
+1. input n
+2. fact = 1 ,i = 1
+3. run loop till n:
+ - while(i <= n):
+        fact += i
+        i++
+4. print(fact)
+5. exit
+
+##### Given a Person's age,find if they should get a driving license or not.
+
+
+- **Logic** - Check condition driver is aligible or not.
+
+- Steps:
+1. input age
+2. if(age > 18):
+         print("Aligible")
+   else:
+         print("Not Aligible")
+    
+3. exit
+
+##
+
+
