@@ -59,6 +59,7 @@
   "files.associations": {
     "stdbool.h": "c",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "algorithm": "cpp"
   }
 }
