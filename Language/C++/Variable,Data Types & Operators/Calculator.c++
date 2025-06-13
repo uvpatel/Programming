@@ -20,7 +20,7 @@ int main() {
     cin >> c;
     cout << "Enter Second Numbers: " << endl;
     cin >> d;
-    cout << "The Remender of c% d is " << c % d << endl;
+    cout << "The Remender of c % d is " << c % d << endl;
 
     return 0;
 }

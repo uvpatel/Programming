@@ -10,6 +10,7 @@
 7) Build Strong Logic and Fundamentals. Theory Concepts are also important and after getting the theory applying in Development and in Real world application.
 8) Utilise your time in productive work, have patience. also , don't stick to one perticular stack or framwork, in programming main thing is problem solving.Use framework and stack according to usecase use them wisely according to project needs.
 9) In Programming everything is logical don't just code but logic understanding is always on the top. input output not metter approch always metter in whether it is a life or programming.
+10) Know needs and wants in Programming DSA and Development is need so first focus on that and then explore your wants like ML,AI,DS ,DL and blockchain etc.
 
 
 ## Rule of 100:
