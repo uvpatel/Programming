@@ -147,3 +147,68 @@ summry
 - add binary
 - 2's Comp / 1's Comp
 ---
+
+### Operator Precedence (Priority like maths' Bodmas concept. )
+- which operation will be perform first.
+
+| Operators                 | Precedence Order | Associativity |
+|--------------------------|------------------|---------------|
+| `!`, `+`, `-` (unary)    | First            | Right to Left |
+| `*`, `/`, `%`            | Second           | Left to Right |
+| `+`, `-`                 | Third            | Left to Right |
+| `<`, `<=`, `>=`, `>`     | Fourth           | Left to Right |
+| `==`, `!=`               | Fifth            | Left to Right |
+| `&&`                     | Sixth            | Left to Right |
+| `||`                     | Seventh          | Left to Right |
+| `=`                      | Last             | Right to Left |
+
+### Not for interview.
+
+#### Summary:
+- ! and unary will be execute in a first place. a++ * 5 -> first ++ will be executed. 
+
+
+## Scope
+- Scope is concept is gennerally for variable, at which area and code of block where it will be used.
+- Types of Scope :
+1) Local 
+- if-else + loop, functions, block of code.
+
+2) Global
+- 
+
+
+
+
+- **Real World Application** -> in Frontednd calls API ( Application Programming Interface ) if we wamt to call it we should have api for authentication and we can decalre globally it not a good practise. we always should use .env file.
+
+
+## Data Type Modifiers.
+- Change meaning of data types
+- int x Bytes => 32 bits. we can fill this 32 bit 2 ^ 32 possiblities to store the bits.
+- 0 to 2^31 - 1. we can modify  the capacity.
+
+- long >= 4Bytes long int.
+- short
+- long long
+- signed
+- unsigned
+
+**Note** - Bydefualt int and all are signed they can store +ve and -ve values. but we can change it.
+
+**Use** - Unsigned when we store large amount of customers id's so they will be unsigned. or banking system.
+
+- because it will be not use msb. so unsigned negetive will be stored into +ve. capacity not change but for negative spaces are allocated for positive number.
+
+
+## Summery
+- op precedence
+- scope
+- datatype modifiers - signedm unsigned , range.
+
+
+## Home work
+- Figure out how to find if a number is power of 2 without any loop.
+- ip n = 32 return true because it will be done 
+- use bitwise left or right.
+- WAF to reverse an Integer n.
