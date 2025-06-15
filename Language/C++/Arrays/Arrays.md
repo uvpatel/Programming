@@ -120,3 +120,62 @@ int main()
 ```
 
 ## Qustions: find smallest/ largest in Array
+
+- int smallest = +infinity = INT_MAX
+- int largest = +infinity = INT_MIN
+- we compare each values with loop and then print output.
+
+
+## Pass By refrence
+- in pass by refrence means we pass address.
+- array is non primitive data type. when we pass this data structure. we pass the address of this perticular original value. implicitly array will be pass as pass by refrence
+
+- in C++ a refrence is an alternative name for and object or function, and its address is the address of the objects of function it refers to for sake of understanding we are calling it address here.
+
+
+## Pass by reference
+
+- Array is impicityly pointer
+- array store starting address.
+- Array is pointer
+- we add in address and we can treverse array.
+
+
+## Linear Search 
+- it is a one kind of algorithm for finding perticular element.it has a fix method.
+
+- get target element and return index.
+
+## Reverse an Array
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+## summary
+- array -> what is array ?, create , i/o
+- Loops with array
+- max and min
+- reverse an element.
+
+
+## on Coding plateform
+- We should use vectors rather than array it is called qustion of arrays.
+
+## HomeWork
+- WAF to Calculate sum & product of all numbers in an array.
+- WAF to swap the max & min number of an array.
+- WAF to print all the unique values in an array.
+- Nested loop use -> [1,2,3,1,2,3,4] -> 1 -> entire loop
+- WAF to print intersection of 2 arrays.
+-> print common elements
+-> this is not the optimise way. we will do with hashtable.
+
