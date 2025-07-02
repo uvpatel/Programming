@@ -24,3 +24,36 @@ for(int i = 0; i < n; i++){
     }
 }
 ```
+
+## In Qustion 
+- There is no mislead info and anything they give it is a cornar case for better optimisation.
+- This is a sorted array.
+
+
+## Brute -> O(n^2)
+
+## Optimal (O(n)) -> linear time complexity.
+- 2 pointer approach.
+
+
+## Case.
+1) Pair sum > Target -> i , j--
+2) Pair sum < Target -> i++ , j
+3) Pair sum = Target  -> ans -> (i,j)
+
+- i = 0, j = n-1
+
+```c++
+while (i < j){
+    ps = arr[i] + arr[j];
+    if(ps > tar){
+        j--
+    }else if(ps < tar){
+        i++;
+    }else{
+        return i,j;
+    }
+}
+
+```
+

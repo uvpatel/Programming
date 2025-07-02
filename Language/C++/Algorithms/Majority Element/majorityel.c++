@@ -2,7 +2,9 @@
 #include<vector>
 using namespace std;
 
-
+// Brute force -> time complexity O(n^2)
+// Optimized ->  2 pointer approach
+ 
 vector<int> pairSum(vector<int> nums, int target){
     vector<int> ans;
     int  n = nums.size();
