@@ -1,53 +1,29 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
-int prifix(int arr[],int sz,int index){
-
-    int prifix_ = 1, i;
-    for (i = 0; i < sz - 1 ; i++)
+vector<int> productExceptSelf(vector<int> &nums)
+{
+    vector<int> ans;
+    int sz = nums.size();
+    for (int i = 1; i < sz; i++)
     {
-        prifix_ *= arr[i];
-        
+        ans[i] = ans[i - 1] * nums[i - 1];
     }
-    return prifix_;
-}
-
-
-int main() {
-    int nums[] = {1,2,3,4};
-    int sz  = sizeof(nums)/sizeof(int);
-    int index;
-    cout << "Enter index you want to count prifix : " << endl;
-    int leftprod, rightprod; // two pointer approach, prefix and suffix
-    
-    
-    // int prifix_ = [];
-    // for (i = 1; i < sz  ; i++)
-    // {
-    //     prifix_[i] = prifix_[i-1] * nums[i-1];
-        
-    // }
-    // cout << prifix_ << endl;
-    
-
-    // Suffix
-    int suffix[sz];
-
-
+    int suffix = 0;
     for (int i = sz - 2; i >= 0; i--)
     {
-        suffix[i] = suffix[i + 1] * nums[i+1];
+        suffix = suffix * nums[i + 1];
+        ans[i] *= suffix;
     }
-    
+    return ans;
+}
 
-    // cout << prifix(nums,sz) << endl;
-
- 
-    
-
-
+int main()
+{
+    vector<int> vec = {1,2,3,4};
+    cout << productExceptSelf << endl;
 
     return 0;
 }
+
