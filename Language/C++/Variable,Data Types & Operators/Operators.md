@@ -53,13 +53,12 @@ e.g 5 % 2 = 1 , 8 % 16 = 8. etc.
 
 ### 🔍 Truth Table for Conditional Operators
 
-| A     | B     | A || B (OR) | A && B (AND) | !A (NOT) |
-|-------|-------|-------------|---------------|----------|
-| true  | true  | true        | true          | false    |
-| true  | false | true        | false         | false    |
-| false | true  | true        | false         | true     |
-| false | false | false       | false         | true     |
-
+| A     | B     | A \|\| B (OR) | A && B (AND) | !A (NOT) |
+|-------|-------|---------------|--------------|----------|
+| true  | true  | true          | true         | false    |
+| true  | false | true          | false        | false    |
+| false | true  | true          | false        | true     |
+| false | false | false         | false        | true     |
 
 ## Binary Operators
 - It works on Two Operands.
