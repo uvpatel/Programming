@@ -12,7 +12,7 @@
 
 ```c++
 datatype variable_name; 
-cin >>variable_name>> endl;
+cin >>variable_name;
 cout << variable_name <<endl;
 ```
 
