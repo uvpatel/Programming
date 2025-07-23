@@ -1,29 +1,24 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
-vector<int> productExceptSelf(vector<int> &nums)
-{
-    vector<int> ans;
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+        
     int sz = nums.size();
+    vector<int> ans(sz,1);
+
     for (int i = 1; i < sz; i++)
     {
         ans[i] = ans[i - 1] * nums[i - 1];
     }
-    int suffix = 0;
-    for (int i = sz - 2; i >= 0; i--)
+
+    int suffix = 1;
+
+    for (int i = sz - 1; i >= 0; i--)
     {
-        suffix = suffix * nums[i + 1];
         ans[i] *= suffix;
+        suffix *= nums[i];
     }
+
     return ans;
-}
-
-int main()
-{
-    vector<int> vec = {1,2,3,4};
-    cout << productExceptSelf << endl;
-
-    return 0;
-}
-
+    
+    }
+};
